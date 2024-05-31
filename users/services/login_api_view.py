@@ -16,5 +16,8 @@ class UserLoginView(generics.GenericAPIView):
             token, refresh_token = user.get_tokens()
             token = {"access_token": token,"refresh_token": refresh_token}
             return Response(token, status=status.HTTP_200_OK)
-        
+        print("Rishabh")
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+
+class Values:
+    print("logging")
